@@ -1,0 +1,53 @@
+---
+description: This explains how and where to read and write notes about the project structure and workings. Notes form a knowledge base about the project to be used by the AI Agents working on the project.
+globs: 
+alwaysApply: false
+---
+# KI-Notizen
+
+Der `.cursor/notes`-Ordner enthält Notizen über das, was du zuvor über das Projekt gelernt hast.
+Die Notizen bilden eine Wissensbasis über das Projekt, die von den KI-Agenten verwendet wird, die am Projekt arbeiten. Sie sollten dir helfen, wenn du in Zukunft wieder mit demselben Code arbeitest.
+
+**Lies immer zuerst die relevanten Notizen, bevor du eine Aufgabe ausführst, und aktualisiere deine Notizen danach!**
+
+
+## Notizen vor allem anderen lesen
+
+- Bevor du Dateien analysierst, insbesondere bevor du mit der Suche nach Dateien oder der Analyse der allgemeinen Projektstruktur beginnst, konsultiere deine Notizen.
+  - Prüfe, ob das Projekt einen übergeordneten `.cursor/notes`-Ordner hat.
+  - Falls nicht, erstelle einen. Du kannst z.B. `mkdir -p .cursor/notes` vom Projektroot aus verwenden.
+  - Die Notizen sollten eine `index.md`-Datei enthalten, die dir hilft, schnell die relevanten Informationen zu finden. Diese Datei sollte dich insbesondere zu den richtigen Notizdateien für bestimmte Themen führen.
+
+## Notizen mit neuem Wissen aktualisieren
+
+- Nachdem du etwas über die Codebasis gelernt hast, z.B. nach der Analyse von Dateien oder dem Abschluss von Aufgaben, überprüfe den Notizenordner auf eine Datei mit verwandtem Inhalt zu dem, was du gerade gelernt hast.
+  - Falls keine solche Datei existiert, erstelle eine Markdown-Datei mit einem passenden (d.h. themenbezogenen) Namen.
+  - Füge eine prägnante Zusammenfassung dessen, was du gelernt hast, zu deiner Notizdatei hinzu.
+  - Aktualisiere den Notizenindex und stelle sicher, dass dein Wissen richtig referenziert ist, damit du es leicht finden kannst.
+- Nach dem Aktualisieren der Notizen, dedupliziere Inhalte, auch über mehrere Notizdateien hinweg.
+  - Aktualisiere die `index.md`.
+  - Der Index sollte insbesondere eine kurze Zusammenfassung der Projektordnerstruktur und Informationen darüber enthalten, welche Dateien und Ordner mit welchen Teilprojekten/Teilen/Funktionen/Funktionalitäten zusammenhängen.
+  - Der Index sollte mindestens einen Link zu jeder anderen Datei im Notizenverzeichnis mit einer kurzen Beschreibung des Zwecks und Inhalts dieser Datei enthalten.
+
+## Regeln und Notizen synchronisieren
+
+- Beim Aktualisieren oder Ändern von Cursor-Regeln, überprüfe immer, ob verwandte Notizen ebenfalls aktualisiert werden müssen.
+  - Wenn Regelinformationen in Notizen dupliziert sind, stelle sicher, dass sie konsistent sind, oder erwäge, doppelte Inhalte aus den Notizen zu entfernen und stattdessen auf die Regel zu verweisen.
+  - Wenn du mit Regeln arbeitest, die Projektstrukturinformationen enthalten (wie Changelog-Konventionen), stelle sicher, dass die repository_structure.md-Notizen dieselben Informationen widerspiegeln.
+- Umgekehrt solltest du beim Aktualisieren von Notizen prüfen, ob Regeln aktualisiert werden sollten, um dem neuen Wissen zu entsprechen.
+- Wenn Informationen sowohl in Regeln als auch in Notizen existieren, bevorzuge die Speicherung detaillierter Informationen in Regeln und lass Notizen auf die Regeln verweisen.
+
+## Wartung nach jedem Update
+
+- Halte die Notizen ordentlich, gut strukturiert und prägnant.
+- Die Notizen sollten allgemeine Notizen über Stile, Strategien, Codestrukturen und allgemeine Verhaltenshinweise wie die zu verwendenden Tools enthalten.
+  - Notizen sollten nicht zu detailliert sein. Verweise lieber aus den Notizen auf Quelldateien, als zu viele Details einzufügen.
+- Die Notizen sollten keine einzelnen Changelog-Einträge über Details enthalten, die geändert wurden. Dafür gibt es dedizierte Changelog.md-Dateien.
+  - Schreibe keine historischen Notizen über Änderungen in die Notizen, beschreibe nur den aktuellen Zustand.
+- Bevor du Notizeninhalte oder neue Dateien hinzufügst, überlege, ob das Lesen in der Zukunft hilfreich sein wird, um das Projekt schneller zu verstehen.
+  - Verschmutze den Notizenordner nicht mit ablenkenden Informationen oder oberflächlichen Beschreibungen, die leicht aus Quellen abgeleitet werden können. Verweise lieber darauf, wo solche Informationen zu finden sind.
+- Nach dem Hinzufügen von Notizen, versuche, alle `.cursor/notes` zu konsolidieren.
+  - Behalte lieber Zusammenfassungen und Schlüsselwörter als langen Text.
+  - Versuche, die Anzahl der Notizdateien zu reduzieren, indem du Dateien zusammenführst, die ähnliche Themen behandeln.
+- Denk daran, die `index.md` immer aktuell zu halten
+

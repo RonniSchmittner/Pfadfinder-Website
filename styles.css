@@ -1,6 +1,7 @@
 /* Custom styles */
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 4rem; /* Account for fixed header */
 }
 
 /* Fixed Navigation */
@@ -11,8 +12,10 @@ html {
     right: 0;
     background-color: rgba(30, 58, 138, 0.95); /* Semi-transparent blue */
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .nav-link {
@@ -44,12 +47,18 @@ html {
 .parallax-header {
     height: 100vh;
     background-image: url('titel.jpg');
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin-top: 0; /* Remove margin since nav is fixed */
+    margin-top: 0;
+}
+
+/* Modern parallax effect */
+@media (min-width: 768px) {
+    .parallax-header {
+        background-attachment: fixed;
+    }
 }
 
 .overlay {
@@ -58,13 +67,20 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
     z-index: 1;
 }
 
 /* Section transitions */
 section {
     transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Custom animations */
@@ -91,7 +107,7 @@ section {
     }
     
     .parallax-header {
-        background-attachment: scroll;
+        height: 80vh;
     }
 }
 
@@ -111,4 +127,55 @@ section {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #2563eb;
+}
+
+/* Mobile menu animations */
+#mobile-menu {
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.hidden {
+    max-height: 0;
+}
+
+#mobile-menu:not(.hidden) {
+    max-height: 300px;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+    button, a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+}
+
+/* Add smooth transitions for all interactive elements */
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* Improve focus states for accessibility */
+a:focus, button:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Add loading animation for images */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
 } 
