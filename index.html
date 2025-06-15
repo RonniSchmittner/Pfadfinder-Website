@@ -14,8 +14,8 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <a href="#" class="text-xl font-bold text-white flex items-center space-x-2">
-                        <img src="haag.png" alt="Wappen 1" class="w-8 h-8 object-contain" loading="lazy" />
-                        <img src="wappen2.png" alt="Wappen 2" class="w-8 h-8 object-contain" loading="lazy" />
+                        <img src="haag.png" alt="Wappen 1" class="h-10 w-auto" loading="lazy" />
+                        <img src="wappen2.png" alt="Wappen 2" class="h-10 w-auto" loading="lazy" />
                         <span class="hidden sm:inline">Stamm Saporoger & Hag Theophanu</span>
                         <span class="sm:hidden">Pfadfinder Hürth</span>
                     </a>
@@ -58,23 +58,6 @@
         </div>
     </header>
 
-    <!-- Pfadfinderheim Section -->
-    <section id="heim" class="py-12 md:py-20 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Pfadfinderheim</h2>
-            <div class="max-w-3xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-lg">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Ausstattung</h3>
-                <p class="text-gray-600 mb-4">Im renovierten Haupthaus befinden sich die Küche, zwei Schlafzimmer, ein großer Wohnraum mit einem großen Tisch, das Bad mit Dusche, Waschbecken und einer Toilette. Draußen findet Ihr eine Hütte mit Sitzgelegenheiten und Kühlschränken, sowie ein Vordach mit weiterer Nutzfläche. Eine große Feuerstelle, eine Außentoilette und viel Platz für Zelte bieten Euch optimale Bedingungen für Euren Aufenthalt im Freien.</p>
-                <h3 class="text-lg md:text-xl font-bold mb-2">Freizeit</h3>
-                <p class="text-gray-600 mb-4">Grillplatz, Lagerfeuer, Bolzplatz, Klettermöglichkeit, eigener Wald</p>
-                <h3 class="text-lg md:text-xl font-bold mb-2">Bemerkungen</h3>
-                <p class="text-gray-600 mb-4">Es sind keine Partys erlaubt.<br>Müll und Flaschen müssen selber wieder mitgenommen werden.<br>Für die Betten sind Schlafsäcke nötig.</p>
-                <h3 class="text-lg md:text-xl font-bold mb-2">Zusätzliche Angaben</h3>
-                <p class="text-gray-600 mb-4">Nur 10 km südwestlich der Kölner Innenstadt liegt der alte Tierpark.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Über uns Section -->
     <section id="ueber-uns" class="py-12 md:py-20">
         <div class="container mx-auto px-4">
@@ -92,8 +75,25 @@
         </div>
     </section>
 
-    <!-- Heimabende Section -->
+    <!-- Pfadfinderheim Section -->
     <section id="heim" class="py-12 md:py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Pfadfinderheim</h2>
+            <div class="max-w-3xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Ausstattung</h3>
+                <p class="text-gray-600 mb-4">Im renovierten Haupthaus befinden sich die Küche, zwei Schlafzimmer, ein großer Wohnraum mit einem großen Tisch, das Bad mit Dusche, Waschbecken und einer Toilette. Draußen findet Ihr eine Hütte mit Sitzgelegenheiten und Kühlschränken, sowie ein Vordach mit weiterer Nutzfläche. Eine große Feuerstelle, eine Außentoilette und viel Platz für Zelte bieten Euch optimale Bedingungen für Euren Aufenthalt im Freien.</p>
+                <h3 class="text-lg md:text-xl font-bold mb-2">Freizeit</h3>
+                <p class="text-gray-600 mb-4">Grillplatz, Lagerfeuer, Bolzplatz, Klettermöglichkeit, eigener Wald</p>
+                <h3 class="text-lg md:text-xl font-bold mb-2">Bemerkungen</h3>
+                <p class="text-gray-600 mb-4">Es sind keine Partys erlaubt.<br>Müll und Flaschen müssen selber wieder mitgenommen werden.<br>Für die Betten sind Schlafsäcke nötig.</p>
+                <h3 class="text-lg md:text-xl font-bold mb-2">Zusätzliche Angaben</h3>
+                <p class="text-gray-600 mb-4">Nur 10 km südwestlich der Kölner Innenstadt liegt der alte Tierpark.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heimabende Section -->
+    <section id="heimabende" class="py-12 md:py-20 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Unsere Heimabende</h2>
             <div class="max-w-3xl mx-auto mb-8">
@@ -142,7 +142,29 @@
                     BIC: COKSDE33XXX<br>
                     Spendenquittung auf Anfrage</p>
                 </div>
-                <p class="text-gray-500 text-sm">Weitere Informationen und Formulare findest du auf der <a href="https://saporoger.de/pfadfinderheim/foerderverein/" class="text-blue-800 underline hover:text-blue-600" target="_blank">offiziellen Website</a>.</p>
+                <div class="mt-6 space-y-4">
+                    <p class="text-gray-600">Wichtige Dokumente zum Download:</p>
+                    <div class="flex flex-col space-y-2">
+                        <a href="SEPA-Mandat.pdf" class="text-blue-800 hover:text-blue-600 flex items-center" target="_blank">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            SEPA-Mandat (Einzugsermächtigung)
+                        </a>
+                        <a href="Aufnahmeantrag_FV.pdf" class="text-blue-800 hover:text-blue-600 flex items-center" target="_blank">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Aufnahmeantrag
+                        </a>
+                        <a href="Satzung.pdf" class="text-blue-800 hover:text-blue-600 flex items-center" target="_blank">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Satzung
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
