@@ -150,8 +150,13 @@
         </div>
     </section>
 
+    <!-- Parallax Image 1 -->
+    <div class="parallax-container">
+        <div class="parallax-bg" style="background-image: url('img/foto1.jpg');"></div>
+    </div>
+
     <!-- Pfadfinderheim Section -->
-    <section id="heim" class="py-12 md:py-20 bg-gray-100">
+    <section id="heim" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Pfadfinderheim</h2>
             <div class="max-w-3xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-lg">
@@ -167,8 +172,13 @@
         </div>
     </section>
 
+    <!-- Parallax Image 2 -->
+    <div class="parallax-container">
+        <div class="parallax-bg" style="background-image: url('img/foto2.jpg');"></div>
+    </div>
+
     <!-- Förderverein Section -->
-    <section id="foerderverein" class="py-12 md:py-20">
+    <section id="foerderverein" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Förderverein</h2>
             <div class="max-w-3xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-lg">
@@ -213,8 +223,13 @@
         </div>
     </section>
 
+    <!-- Parallax Image 3 -->
+    <div class="parallax-container">
+        <div class="parallax-bg" style="background-image: url('img/foto3.jpg');"></div>
+    </div>
+
     <!-- Kontakt Section -->
-    <section id="kontakt" class="py-12 md:py-20">
+    <section id="kontakt" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Kontakt</h2>
             <div class="max-w-3xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-lg text-center">
@@ -336,6 +351,27 @@
                     target.scrollIntoView({
                         behavior: 'smooth'
                     });
+                }
+            });
+        });
+
+        // Parallax effect
+        document.addEventListener('scroll', function() {
+            const parallaxBgs = document.querySelectorAll('.parallax-bg');
+            parallaxBgs.forEach(bg => {
+                const container = bg.parentElement;
+                const rect = container.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // Calculate how far the container is from the top of the viewport
+                const containerTop = rect.top + scrollTop;
+                const containerBottom = containerTop + rect.height;
+                
+                // Only apply effect when container is in or near viewport
+                if (containerBottom > scrollTop && containerTop < scrollTop + window.innerHeight) {
+                    const speed = 0.2; // Reduced speed for smoother effect
+                    const yPos = (scrollTop - containerTop) * speed;
+                    bg.style.backgroundPosition = `center ${yPos}px`;
                 }
             });
         });
