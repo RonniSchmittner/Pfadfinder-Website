@@ -9,7 +9,7 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(22, 101, 52, 0.95); /* Semi-transparent green */
+    background-color: rgba(30, 58, 138, 0.95); /* Semi-transparent blue */
     backdrop-filter: blur(5px);
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -22,7 +22,7 @@ html {
 }
 
 .nav-link:hover {
-    color: #9ae6b4;
+    color: #93c5fd;
 }
 
 .nav-link::after {
@@ -32,7 +32,7 @@ html {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: #9ae6b4;
+    background-color: #93c5fd;
     transition: width 0.3s ease;
 }
 
@@ -105,10 +105,10 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #2f855a;
+    background: #1e3a8a;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #276749;
+    background: #2563eb;
 } 

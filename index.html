@@ -9,17 +9,22 @@
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed-nav">
+    <nav class="fixed-nav bg-blue-900">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <a href="#" class="text-xl font-bold text-white">Stamm Saporoger & Hag Theophanu</a>
+                    <a href="#" class="text-xl font-bold text-white flex items-center space-x-2">
+                        <!-- Wappen werden hier eingefügt -->
+                        <img src="wappen1.png" alt="Wappen 1" class="h-8 w-8 inline-block mr-2" />
+                        <img src="wappen2.png" alt="Wappen 2" class="h-8 w-8 inline-block mr-2" />
+                        Stamm Saporoger & Hag Theophanu
+                    </a>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#ueber-uns" class="nav-link">Über uns</a>
-                    <a href="#heim" class="nav-link">Pfadfinderheim</a>
-                    <a href="#foerderverein" class="nav-link">Förderverein</a>
-                    <a href="#kontakt" class="nav-link">Kontakt</a>
+                    <a href="#ueber-uns" class="nav-link text-white hover:text-blue-300">Über uns</a>
+                    <a href="#heim" class="nav-link text-white hover:text-blue-300">Pfadfinderheim</a>
+                    <a href="#foerderverein" class="nav-link text-white hover:text-blue-300">Förderverein</a>
+                    <a href="#kontakt" class="nav-link text-white hover:text-blue-300">Kontakt</a>
                 </div>
             </div>
         </div>
@@ -31,7 +36,7 @@
         <div class="container mx-auto px-4 py-32 text-center relative z-10">
             <h1 class="text-5xl font-bold mb-4 text-white">Pfadfinder in Hürth</h1>
             <p class="text-xl mb-8 text-white">Gemeinschaft, Abenteuer und Natur erleben</p>
-            <a href="#kontakt" class="bg-white text-green-800 px-8 py-3 rounded-full font-bold hover:bg-green-100 transition duration-300">
+            <a href="#kontakt" class="bg-white text-blue-900 px-8 py-3 rounded-full font-bold hover:bg-blue-100 transition duration-300">
                 Jetzt mitmachen!
             </a>
         </div>
@@ -76,6 +81,18 @@
     <section id="heim" class="py-20 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">Unsere Heimabende</h2>
+            <div class="max-w-3xl mx-auto mb-8">
+                <div class="bg-blue-100 p-6 rounded-lg shadow text-gray-700 text-base">
+                    <p class="mb-1">Du hast Lust auf Abenteuer?</p>
+                    <p class="mb-1">Du bist gerne draußen?</p>
+                    <p class="mb-1">Du bist zwischen 6 und 16 Jahre alt?</p>
+                    <p class="mb-1">Du bist gerne mit anderen zusammen?</p>
+                    <p class="mb-1">Du magst spielen, singen, Feuer machen, werken und noch viel mehr?</p>
+                    <p class="mb-1">Du suchst ein Hobby, was dich dein ganzes Leben lang begleitet?</p>
+                    <p class="mt-2">Wenn du Lust darauf hast, komm einfach beim nächsten Heimabend (Dienstags von 17 bis 19.00 Uhr) vorbei. Oder schreib uns. Einstieg jederzeit möglich!</p>
+                    <p class="mt-2"><strong>Kontakt:</strong> <a href="mailto:hag-theophanu@gmx.de" class="text-blue-800 underline">hag-theophanu@gmx.de</a></p>
+                </div>
+            </div>
             <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
                 <p class="text-lg mb-6">Treffpunkt: Pfadfinderzentrum, Luxemburgerstraße 519</p>
                 <div class="grid md:grid-cols-2 gap-8">
@@ -111,7 +128,7 @@
                     BIC: COKSDE33XXX<br>
                     Spendenquittung auf Anfrage</p>
                 </div>
-                <p class="text-gray-500 text-sm">Weitere Informationen und Formulare findest du auf der <a href="https://saporoger.de/pfadfinderheim/foerderverein/" class="text-green-800 underline hover:text-green-600" target="_blank">offiziellen Website</a>.</p>
+                <p class="text-gray-500 text-sm">Weitere Informationen und Formulare findest du auf der <a href="https://saporoger.de/pfadfinderheim/foerderverein/" class="text-blue-800 underline hover:text-blue-600" target="_blank">offiziellen Website</a>.</p>
             </div>
         </div>
     </section>
@@ -121,7 +138,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">Kontakt</h2>
             <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg text-center">
-                <a href="mailto:kontakt@saporoger.de" class="inline-block bg-green-800 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition duration-300">
+                <a href="mailto:kontakt@saporoger.de" class="inline-block bg-blue-900 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-800 transition duration-300">
                     Kontaktieren Sie uns
                 </a>
             </div>
@@ -129,10 +146,44 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-green-800 text-white py-8">
+    <footer class="bg-blue-900 text-white py-8">
         <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2024 Stamm Saporoger & Hag Theophanu. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2025 Stamm Saporoger & Hag Theophanu. Alle Rechte vorbehalten. | <button id="impressum-link" class="underline hover:text-blue-200">Impressum</button></p>
         </div>
     </footer>
+
+    <!-- Impressum Modal -->
+    <div id="impressum-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-lg max-w-2xl w-full p-8 relative">
+            <button id="close-impressum" class="absolute top-4 right-4 text-gray-500 hover:text-blue-800 text-2xl">&times;</button>
+            <h2 class="text-2xl font-bold mb-4">Impressum</h2>
+            <div class="text-gray-700 text-sm space-y-4 max-h-[60vh] overflow-y-auto">
+                <p>Dies ist die Internetpräsenz des Stammes Saporoger und des Hag Theophanu im Deutschen Pfadfinderbund.</p>
+                <p><strong>Verantwortlich und vertretungsberechtigt:</strong><br>
+                Anabel Bezenburg<br>
+                Grüngürtel Str. 10<br>
+                50996 Köln</p>
+                <p><strong>E-Mail:</strong> <a href="mailto:kontakt@saporoger.de" class="text-blue-800 underline">kontakt@saporoger.de</a></p>
+                <!-- Optional: Vereinsregister und Umsatzsteuer-ID falls vorhanden -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+      // Modal öffnen
+      document.getElementById('impressum-link').onclick = function() {
+        document.getElementById('impressum-modal').classList.remove('hidden');
+      };
+      // Modal schließen
+      document.getElementById('close-impressum').onclick = function() {
+        document.getElementById('impressum-modal').classList.add('hidden');
+      };
+      // Schließen bei Klick auf Hintergrund
+      document.getElementById('impressum-modal').onclick = function(e) {
+        if (e.target === this) {
+          this.classList.add('hidden');
+        }
+      };
+    </script>
 </body>
 </html> 
