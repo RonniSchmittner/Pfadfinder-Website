@@ -43,34 +43,6 @@ html {
     width: 100%;
 }
 
-/* Parallax Header */
-.parallax-header {
-    height: 100vh;
-    background-image: url('titel.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    margin-top: 0;
-}
-
-/* Modern parallax effect */
-@media (min-width: 768px) {
-    .parallax-header {
-        background-attachment: fixed;
-    }
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
-    z-index: 1;
-}
-
 /* Section transitions */
 section {
     transition: transform 0.3s ease;
@@ -104,10 +76,6 @@ section.visible {
     .container {
         padding-left: 1rem;
         padding-right: 1rem;
-    }
-    
-    .parallax-header {
-        height: 80vh;
     }
 }
 
@@ -206,5 +174,21 @@ img[loading="lazy"].loaded {
     }
     .parallax-bg {
         background-attachment: scroll;
+    }
+}
+
+/* Hero Parallax Section (full window height) */
+.hero-parallax {
+    height: 100vh;
+}
+
+.hero-parallax .parallax-bg {
+    background-size: 140%;
+    background-position: center 20%;
+}
+
+@media (max-width: 768px) {
+    .hero-parallax {
+        height: 80vh;
     }
 } 

@@ -85,22 +85,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Parallax effect
-document.addEventListener('scroll', function() {
+function updateParallax() {
     const parallaxBgs = document.querySelectorAll('.parallax-bg');
     parallaxBgs.forEach(bg => {
         const container = bg.parentElement;
         const rect = container.getBoundingClientRect();
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Calculate how far the container is from the top of the viewport
         const containerTop = rect.top + scrollTop;
         const containerBottom = containerTop + rect.height;
-        
-        // Only apply effect when container is in or near viewport
+
+        // Default offset for all parallax sections
+        let initialOffset = 0;
+        // If this is the hero section, start higher
+        if (container.classList.contains('hero-parallax')) {
+            initialOffset = -400; // You can adjust this value for more/less offset
+        }
+
         if (containerBottom > scrollTop && containerTop < scrollTop + window.innerHeight) {
-            const speed = 0.2; // Reduced speed for smoother effect
-            const yPos = (scrollTop - containerTop) * speed;
+            const speed = 0.2;
+            let yPos = initialOffset;
+            if (scrollTop > containerTop) {
+                yPos += (scrollTop - containerTop) * speed;
+            }
             bg.style.backgroundPosition = `center ${yPos}px`;
+        } else {
+            bg.style.backgroundPosition = `center ${initialOffset}px`;
         }
     });
-}); 
+}
+
+document.addEventListener('scroll', updateParallax);
+document.addEventListener('DOMContentLoaded', updateParallax); 
