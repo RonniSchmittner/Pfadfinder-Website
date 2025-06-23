@@ -1,3 +1,5 @@
+[![pages-build-deployment](https://github.com/RonniSchmittner/Pfadfinder-Website/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/RonniSchmittner/Pfadfinder-Website/actions/workflows/pages/pages-build-deployment)
+
 # Pfadfinder-Website Hürth
 
 Die offizielle Webseite der Hürther Pfadfindergruppen Stamm Saporoger und Hag Theophanu.
