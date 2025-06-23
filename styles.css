@@ -269,10 +269,52 @@ img[loading="lazy"].loaded {
     text-shadow: 2px 2px 4px rgba(0,0,0,1), 4px 4px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);
     position: relative;
     z-index: 2;
+    font-size: 3.5rem !important; /* Größere Schrift für Hero-Haupttitel */
+    font-weight: 800; /* Dickerer Font-Weight für bessere Sichtbarkeit */
 }
 
 .hero-parallax p {
     text-shadow: 2px 2px 4px rgba(0,0,0,1), 3px 3px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6);
     position: relative;
     z-index: 2;
+    font-size: 1.4rem !important; /* Größere Schrift für Hero-Untertitel */
+    font-weight: 500; /* Mittlerer Font-Weight */
+}
+
+/* Hero-Button vergrößern */
+.hero-parallax a {
+    font-size: 1.2rem !important; /* Größere Schrift für Hero-Button */
+    font-weight: 600; /* Dickerer Font-Weight für Button */
+    padding: 1rem 2rem !important; /* Größerer Button */
+}
+
+/* Responsive Anpassungen für Hero-Section */
+@media (max-width: 768px) {
+    .hero-parallax h1 {
+        font-size: 2.5rem !important; /* Angepasste Größe für Mobile */
+    }
+    
+    .hero-parallax p {
+        font-size: 1.2rem !important; /* Angepasste Größe für Mobile */
+    }
+    
+    .hero-parallax a {
+        font-size: 1.1rem !important; /* Angepasste Größe für Mobile */
+        padding: 0.8rem 1.5rem !important; /* Angepasster Button für Mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-parallax h1 {
+        font-size: 2rem !important; /* Noch kleinere Größe für sehr kleine Bildschirme */
+    }
+    
+    .hero-parallax p {
+        font-size: 1.1rem !important;
+    }
+    
+    .hero-parallax a {
+        font-size: 1rem !important;
+        padding: 0.7rem 1.2rem !important;
+    }
 } 
