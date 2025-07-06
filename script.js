@@ -99,8 +99,8 @@ function updateParallax() {
         }
 
         if (rect.top < window.innerHeight && rect.bottom > 0) {
-            const speed = 0.2;
-            let yPos = initialOffset + (rect.top - window.innerHeight) * speed;
+            const speed = (bg.getBoundingClientRect().height - rect.height) / window.innerHeight;
+            let yPos = initialOffset + rect.top * speed;
             bg.style.backgroundPosition = `center ${yPos}px`;
         } else {
             bg.style.backgroundPosition = `center ${initialOffset}px`;
