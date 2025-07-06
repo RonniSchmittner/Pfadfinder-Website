@@ -90,23 +90,17 @@ function updateParallax() {
     parallaxBgs.forEach(bg => {
         const container = bg.parentElement;
         const rect = container.getBoundingClientRect();
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const containerTop = rect.top + scrollTop;
-        const containerBottom = containerTop + rect.height;
-
+        
         // Default offset for all parallax sections
         let initialOffset = 0;
         // If this is the hero section, start higher
         if (container.classList.contains('hero-parallax')) {
-            initialOffset = -400; // You can adjust this value for more/less offset
+            initialOffset = - rect.height * 0.1; // You can adjust this value for more/less offset
         }
 
-        if (containerBottom > scrollTop && containerTop < scrollTop + window.innerHeight) {
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
             const speed = 0.2;
-            let yPos = initialOffset;
-            if (scrollTop > containerTop) {
-                yPos += (scrollTop - containerTop) * speed;
-            }
+            let yPos = initialOffset + (rect.top - window.innerHeight) * speed;
             bg.style.backgroundPosition = `center ${yPos}px`;
         } else {
             bg.style.backgroundPosition = `center ${initialOffset}px`;
